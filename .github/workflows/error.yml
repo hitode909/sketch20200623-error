@@ -1,0 +1,14 @@
+name: error
+
+on:
+  pull_request:
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: |
+          echo -n '::error file=README.md,line=1::'
+          ruby -e 'puts rand'
+          exit 1
