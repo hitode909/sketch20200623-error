@@ -5,6 +5,7 @@ on:
 
 jobs:
   prepare:
+    runs-on: ubuntu-16.04
     steps:
       - name: test
         run: |
